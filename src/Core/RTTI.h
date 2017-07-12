@@ -41,12 +41,11 @@ static_assert(&classname::StaticGetType == &StaticGetType, "RTTI classname does 
 
 #define DECLARE_RTTI(classname, baseclass) \
 public: \
-static	const RTTI*	StaticGetType() \
+static const RTTI* StaticGetType() \
 { \
 	static_assert(std::is_base_of<baseclass, classname>::value, "RTTI: class must derive from base."); \
 	static_assert(!std::is_same<baseclass, classname>::value, "RTTI: base class and derived class are the same."); \
 	static const RTTI sType(#classname, baseclass::StaticGetType()); return &sType; \
-}	\
-virtual	const RTTI* GetType() const override	{ return StaticGetType(); } \
-static_assert(classname::StaticGetType == StaticGetType, "RTTI classname does not match class's name"); \
-
+} \
+virtual	const RTTI* GetType() const override { return StaticGetType(); } \
+static_assert(classname::StaticGetType == StaticGetType, "RTTI classname does not match class's name");
