@@ -144,10 +144,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\RTTI.cpp" />
+    <ClCompile Include="src\Entity\Entity.cpp" />
+    <ClCompile Include="src\Entity\EntityUnitTests.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Core\RTTI.h" />
+    <ClInclude Include="src\Entity\Entity.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

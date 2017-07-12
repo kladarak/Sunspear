@@ -11,5 +11,10 @@ int main()
 
 	RTTI::StaticRunUnitTests();
 
+	extern void DoEntityUnitTests();
+	DoEntityUnitTests();
+
+	while (true);
+
 	return 0;
 }
