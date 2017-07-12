@@ -24,11 +24,16 @@ namespace
 	class BaseB
 	{
 		DECLARE_RTTI_ROOT(BaseB)
+		//DECLARE_RTTI_ROOT(BaseA) // Test correct class type compiler assertion
+		//DECLARE_RTTI(BaseB, BaseB) // Test compiler error for using wrong macro
 	};
 
 	class DerivedB : public BaseB
 	{
 		DECLARE_RTTI(DerivedB, BaseB)
+		//DECLARE_RTTI(DerivedA, BaseA) // Test correct class type compiler assertion
+		//DECLARE_RTTI(DerivedB, BaseA) // Test correct base type compiler assertion
+		//DECLARE_RTTI(DerivedB, DerivedB)
 	};
 
 	template<typename T>

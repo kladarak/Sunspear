@@ -14,6 +14,8 @@ int main()
 	extern void DoEntityUnitTests();
 	DoEntityUnitTests();
 
+	cout << "Completed unit tests." << endl;
+
 	while (true);
 
 	return 0;
