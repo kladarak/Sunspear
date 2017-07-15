@@ -1,12 +1,13 @@
 #include <stdafx.h>
+#include <assert.h>
+
 #include "Entity.h"
 
-#include <assert.h>
+namespace Sunspear
+{
 
 namespace
 {
-	using namespace Sunspear;
-
 	class ComponentA : public IComponent
 	{
 		DECLARE_RTTI(ComponentA, IComponent)
@@ -37,4 +38,6 @@ void DoEntityUnitTests()
 	assert(e.FindComponent<ComponentA>() == &a);
 	assert(e.FindComponent<ComponentB>() == &b);
 	assert(e.FindComponent<ComponentC>() == &c);
+}
+
 }

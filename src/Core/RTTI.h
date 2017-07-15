@@ -21,8 +21,6 @@ namespace Sunspear
 		bool IsA(const RTTI* inType) const { return this == inType || (mParent && mParent->IsA(inType)); }
 		const std::string& GetClassName() const { return mClassName; }
 
-		static void StaticRunUnitTests();
-
 	private:
 		const RTTI* mParent = nullptr;
 		std::string mClassName;

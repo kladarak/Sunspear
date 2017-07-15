@@ -1,6 +1,7 @@
 #include <stdafx.h>
-#include "RTTI.h"
 #include <assert.h>
+
+#include "RTTI.h"
 
 namespace Sunspear
 {
@@ -56,7 +57,7 @@ namespace
 	}
 }
 
-void RTTI::StaticRunUnitTests()
+void DoRTTIUnitTests()
 {
 	CheckAllTypes<BaseA>	(true,	false,	false,	false,	false);
 	CheckAllTypes<DerivedA>	(true,	true,	false,	false,	false);
