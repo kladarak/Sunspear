@@ -1,3 +1,4 @@
+#include <stdafx.h>
 #include "RTTI.h"
 #include <assert.h>
 
